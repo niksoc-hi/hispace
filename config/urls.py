@@ -10,6 +10,7 @@ urlpatterns = [
     path(settings.ADMIN_URL, admin.site.urls),
     # User management
     path("users/", include("hispace.users.urls", namespace="users")),
+    path("posts/", include("hispace.posts.urls", namespace="posts")),
     path("accounts/", include("allauth.urls")),
     path(
         "", login_required(TemplateView.as_view(template_name="base.html")), name="home"

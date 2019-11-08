@@ -56,9 +56,18 @@ THIRD_PARTY_APPS = [
     "allauth.socialaccount",
     "allauth.socialaccount.providers.google",
     "rest_framework",
+    "django_filters",
+    "django_comments",
+    "vote",
+    "taggit",
 ]
 
-LOCAL_APPS = ["hispace.users.apps.UsersConfig"]
+LOCAL_APPS = [
+    "hispace.users.apps.UsersConfig",
+    "hispace.comments.apps.CommentsConfig",
+    "hispace.votes",
+    "hispace.posts",
+]
 
 INSTALLED_APPS = DJANGO_APPS + THIRD_PARTY_APPS + LOCAL_APPS
 
@@ -195,3 +204,5 @@ SOCIALACCOUNT_ADAPTER = "hispace.users.adapters.SocialAccountAdapter"
 SOCIALACCOUNT_PROVIDERS = {
     "google": {"SCOPE": ["profile", "email"], "AUTH_PARAMS": {"access_type": "online"}}
 }
+
+COMMENTS_APP = "hispace.comments"
