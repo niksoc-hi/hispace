@@ -326,3 +326,7 @@ hispace/media/
 .env
 .envs/*
 !.envs/.local/
+
+# pycharm
+**/.idea/workspace.xml
+**/.idea/tasks.xml
