@@ -66,7 +66,7 @@ LOCAL_APPS = [
     "hispace.users.apps.UsersConfig",
     "hispace.comments.apps.CommentsConfig",
     "hispace.votes",
-    "hispace.posts",
+    "hispace.posts.apps.PostsConfig",
 ]
 
 INSTALLED_APPS = DJANGO_APPS + THIRD_PARTY_APPS + LOCAL_APPS
